@@ -1,22 +1,24 @@
 # 去重
 
-## grep 
+**linux 下删除重复的行**
+
+1. grep 
 
 ```shell
 grep -v '^[[:space:]]*$' sample.txt
 ```
-![](../assets/img/remove_blank_lines-20220318150247.png)
+![grep](../attachments/img/remove_blank_lines-20220318150247.png)
 
-## sed 
-
-```shell
-sed ‘/^$/d’ sample.txt
-```
-![](../assets/img/remove_blank_lines-20220318150254.png)
-
-## awk
+2.  sed 
 
 ```shell
-awk ‘{if(NF>0) {print $0}}’ sample.txt
+sed '/^$/d' sample.txt
 ```
-![](../assets/img/remove_blank_lines-20220318150301.png)
+![sed](../attachments/img/remove_blank_lines-20220318150254.png)
+
+3. awk
+
+```shell
+awk '{if(NF>0) {print $0}}' sample.txt
+```
+![awk](../attachments/img/remove_blank_lines-20220318150301.png)
