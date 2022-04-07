@@ -82,3 +82,27 @@ head -v -n 2 test.txt
 hello world
 hello linuxcool
 ```
+
+## watch - 周期性执行命令
+
+* watch[参数] [命令]
+
+| 参数             | 说明                                                                                                                             |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| -n/--interval    | watch默认每2秒运行一下程序，可以用-n或-interval来指定间隔的时间                                                                  |
+| -d/--differences | 用-d或--differences 选项watch 会高亮显示变化的区域。 而-d=cumulative选项会把变动过的地方(不管最近的那次有没有变动)都高亮显示出来 |
+| -t/--no-title    | 关闭watch命令在顶部的时间间隔、命令、当前时间的输出                                                                              |
+| -h/--help        | 查看帮助文档                                                                                                                     |
+
+重复执行uptime命令：
+`[root@linuxcool ~]# watch uptime`
+每隔一秒高亮显示网络链接数的变化情况：
+`[root@linuxcool ~]# watch -n 1 -d netstat -ant`
+每10秒一次输出系统的平均负载：
+`[root@linuxcool ~]# watch -n 10 'cat /proc/loadavg'`
+监测磁盘inode和block数目变化情况：
+`[root@linuxcool ~]# watch -n 1 "df -i;df"`
+监测当前目录中test.txt文件的变化：
+`[root@linuxcool ~]# watch -d 'ls -l|grep test.txt'`
+每5秒执行 count.sh 并标记变化
+`watch -n 5 -d './count.sh'`
