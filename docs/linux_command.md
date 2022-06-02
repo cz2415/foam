@@ -106,3 +106,22 @@ hello linuxcool
 `[root@linuxcool ~]# watch -d 'ls -l|grep test.txt'`
 每5秒执行 count.sh 并标记变化
 `watch -n 5 -d './count.sh'`
+
+## netstat命令 – 显示网络状态
+
+* netstat [参数]
+
+| 参数 | 说明                                     |
+| ---- | ---------------------------------------- |
+| -a   | 显示所有连线中的Socket                   |
+| -p   | 显示正在使用Socket的程序识别码和程序名称 |
+| -l   | 仅列出在监听的服务状态                   |
+| -t   | 显示TCP传输协议的连线状况                |
+| -u   | 显示UDP传输协议的连线状况                |
+| -i   | 显示网络界面信息表单                     |
+| -r   | 显示路由表信息                           |
+| -n   | 直接使用IP地址，不通过域名服务器         |
+
+`netstat -ntlp |grep 9192`
+
+## pwdx pid： 查看当前pid进程启动时的工作目录
