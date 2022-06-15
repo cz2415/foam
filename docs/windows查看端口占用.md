@@ -1,4 +1,4 @@
-# windows参看端口占用
+# windows查看端口占用
 
 
 netstat -ano |grep "8001"
