@@ -125,3 +125,5 @@ hello linuxcool
 `netstat -ntlp |grep 9192`
 
 ## pwdx pid： 查看当前pid进程启动时的工作目录
+
+## ps eww -p <process_pid> : 返回某个进程的执行时的环境变量和完整的命令行
