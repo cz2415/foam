@@ -22,3 +22,26 @@
     </executions>
 </plugin
 ```
+
+```xml
+<plugin>    
+    <groupId>group</groupId>   
+    <artifactId>artifact</artifactId>    
+    <executions>
+        <execution>
+        <id>TheNameOfTheRelevantExecution</id>
+        <phase>none</phase>
+        </execution>    
+    </executions>  
+</plugin>
+```
+
+```xml
+<plugin>
+   <groupId>group</groupId>
+   <artifactId>artifact</artifactId>
+   <configuration>
+     <skip>true</skip>
+   </configuration>
+</plugin>
+```
