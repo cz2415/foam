@@ -128,4 +128,5 @@ hello linuxcool
 
 ## ps eww -p <process_pid> : 返回某个进程的执行时的环境变量和完整的命令行
 
- ## ps -ef |grep -v 'grep' |grep '/opt/bigdata/bfdscheduler-4.7.0' |awk '{print $2}'
+## ps -ef |grep -v 'grep' |grep '/opt/bigdata/bfdscheduler-4.7.0' |awk '{print $2}'
+   ps -ef |grep -v 'grep' |grep '/opt/analyse-tactice' |awk '{print $2}'
